@@ -1,0 +1,7 @@
+name = "till-website"
+compatibility_date = "2022-10-15"
+
+# node_compat = true
+
+# [env.development]
+# DATABASE_URL="file:./data.db?connection_limit=1"
