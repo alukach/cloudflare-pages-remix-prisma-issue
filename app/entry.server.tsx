@@ -1,7 +1,7 @@
 import type { EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
 import { renderToString } from "react-dom/server";
-import { injectStyles, createStylesServer } from '@mantine/remix';
+import { injectStyles, createStylesServer } from "@mantine/remix";
 
 const server = createStylesServer();
 

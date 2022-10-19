@@ -1,7 +1,9 @@
 name = "till-website"
 compatibility_date = "2022-10-15"
 
-# node_compat = true
+compatibility_flags = ["streams_enable_constructors"]
 
-# [env.development]
-# DATABASE_URL="file:./data.db?connection_limit=1"
+
+[env.development]
+DATABASE_URL="prisma://aws-us-east-1.prisma-data.com/?api_key=24KC57tpMlPKNm4m8sYhaMRkwY7STC_tmkRaJotRna5xF483IzyfFnHIVzOocASf"
+NODE_VERSION="14.0.0"

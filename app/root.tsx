@@ -7,10 +7,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { MantineProvider, createEmotionCache } from '@mantine/core';
-import { StylesPlaceholder } from '@mantine/remix';
-import { theme } from './theme';
-
+import { MantineProvider, createEmotionCache } from "@mantine/core";
+import { StylesPlaceholder } from "@mantine/remix";
+import { HeaderAction } from "~/components/Header";
+import logo from "~/images/logo.svg";
+import { theme } from "~/theme";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -18,18 +19,42 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-createEmotionCache({ key: 'mantine' });
+createEmotionCache({ key: "mantine" });
+
+const headerLinks = [
+  {
+    link: "#features",
+    label: "Features",
+  },
+  {
+    link: "#pricing",
+    label: "Pricing",
+  },
+  {
+    link: "#faq",
+    label: "FAQ",
+  },
+  {
+    link: "#contact",
+    label: "Contact",
+  },
+];
 
 export default function App() {
   return (
     <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
       <html lang="en">
         <head>
+          <StylesPlaceholder />
           <Meta />
           <Links />
         </head>
         <body>
-          <Outlet />
+          <main>
+            <HeaderAction links={headerLinks} />
+
+            <Outlet />
+          </main>
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
@@ -37,4 +62,18 @@ export default function App() {
       </html>
     </MantineProvider>
   );
+}
+
+export function links() {
+  return [
+    {
+      rel: "icon",
+      href: logo,
+      type: "image/svg",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap",
+    },
+  ];
 }
