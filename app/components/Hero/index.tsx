@@ -83,13 +83,9 @@ export function HeroContentLeft() {
       />
 
       <Container className={classes.container}>
-        <Title className={classes.title}>Power tools for your S3 buckets</Title>
-        <Text className={classes.description} size="xl" mt="xl">
-          Provide your users with an S3-compatible API to your cloud-datasets.
-          Easily capture detailed access metrics, apply custom billing rules,
-          automatically charge users for access, and enforce limits on access
-          patterns.
-        </Text>
+        <Title className={classes.title}>
+          Manage, track, and monetize access to your S3 buckets
+        </Title>
 
         <Button
           variant="gradient"
