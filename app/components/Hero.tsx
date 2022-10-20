@@ -77,11 +77,14 @@ export function HeroContentLeft() {
 
       <Container className={classes.container}>
         <Title className={classes.title}>
-          Powertools for your cloud-datasets
+          Manage, track, and monetize access to your S3 buckets
         </Title>
         <Text className={classes.description} size="xl" mt="xl">
-          Manage, track, and monetize access to your S3 buckets through Till's
-          transparent S3 gateway.
+          Till acts as a metering gateway to your private S3 buckets. When
+          configured with billing rules, users are automatically charged for
+          data access, enabling the bucket owners to recoup the costs associated
+          with egress fees, data storage, and costs associated with dataset
+          creation.
         </Text>
       </Container>
     </div>
