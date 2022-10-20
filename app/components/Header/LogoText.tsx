@@ -10,7 +10,7 @@ export const LogoText: React.FC<Props> = ({ size }) => {
         src={`/logo.svg?${theme.colorScheme}`}
         alt="Till Logo"
       />
-      <h1>till</h1>
+      <h1 style={{ textTransform: "lowercase" }}>Till</h1>
     </Group>
   );
 };
