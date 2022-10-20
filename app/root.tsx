@@ -14,7 +14,7 @@ import { theme } from "~/theme";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "till.sh - metered billing for S3",
   viewport: "width=device-width,initial-scale=1",
 });
 
