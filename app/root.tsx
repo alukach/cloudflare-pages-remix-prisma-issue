@@ -10,7 +10,6 @@ import {
 import { MantineProvider, createEmotionCache } from "@mantine/core";
 import { StylesPlaceholder } from "@mantine/remix";
 import { HeaderAction } from "~/components/Header";
-import logo from "~/images/logo.svg";
 import { theme } from "~/theme";
 
 export const meta: MetaFunction = () => ({
@@ -68,8 +67,15 @@ export function links() {
   return [
     {
       rel: "icon",
-      href: logo,
+      href: "logo.svg",
       type: "image/svg",
+      media: "(prefers-color-scheme: light)",
+    },
+    {
+      rel: "icon",
+      href: "logo.svg?dark=1",
+      type: "image/svg",
+      media: "(prefers-color-scheme: dark)",
     },
     {
       rel: "stylesheet",

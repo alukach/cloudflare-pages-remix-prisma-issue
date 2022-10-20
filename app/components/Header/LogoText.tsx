@@ -1,18 +1,20 @@
-import React from "react";
-import { useLogoColors, type LogoProps } from "./use-logo-colors";
+import { Group, useMantineTheme } from "@mantine/core";
 
-import logo from "~/images/logo.svg";
-import { Group } from "@mantine/core";
-
-export function LogoText({ size, color, ...others }: LogoProps) {
-  const colors = useLogoColors(color);
-
+export const LogoText: React.FC<Props> = ({ size }) => {
+  const theme = useMantineTheme();
   return (
     <Group spacing={5}>
-      {/* TODO: How to support night mode? */}
       {/* https://thenounproject.com/icon/cash-register-1055306/ */}
-      <img height={size} src={logo} alt="Till Logo" />
+      <img
+        height={size}
+        src={`/logo.svg?${theme.colorScheme}`}
+        alt="Till Logo"
+      />
       <h1>till</h1>
     </Group>
   );
+};
+
+interface Props {
+  size: number;
 }
