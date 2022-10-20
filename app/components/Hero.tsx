@@ -84,17 +84,12 @@ export function HeroContentLeft() {
 
       <Container className={classes.container}>
         <Title className={classes.title}>
-          Manage, track, and monetize access to your S3 buckets
+          Powertools for your cloud-datasets
         </Title>
-
-        <Button
-          variant="gradient"
-          size="xl"
-          radius="xl"
-          className={classes.control}
-        >
-          Get started
-        </Button>
+        <Text className={classes.description} size="xl" mt="xl">
+          Manage, track, and monetize access to your S3 buckets through Till's
+          transparent S3 gateway.
+        </Text>
       </Container>
     </div>
   );
